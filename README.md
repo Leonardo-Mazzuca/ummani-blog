@@ -14,13 +14,13 @@ use ruby on rails.
 
     \```bash
      git clone https://github.com/Leonardo-Mazzuca/ummani-blog
-    \```
+
 
   after you must use 
   
     \```bash
      bundle install
-    \```
+
 
   And then you'll have to create the database, so 
   you have to run a couple commands.
@@ -29,20 +29,20 @@ use ruby on rails.
   
     \```bash
     rails db:create
-    \```
+  
   
   Once this is done, you'll have to execute all migrations:
 
      \```bash
     rails db:migrate
-    \```
+   
 
   And finally to populate the database with default data, you'll
   populate the database using:
 
      \```bash
     rails db:seed
-    \```
+
 
 ## Running the app 🏃‍♂️
 
@@ -50,7 +50,7 @@ use ruby on rails.
 
       \```bash
      rails s
-      \```
+
       
   And then try to access the app running at http://localhost:3000 !
 
