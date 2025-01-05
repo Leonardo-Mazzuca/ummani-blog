@@ -1,0 +1,32 @@
+<h2 class="mb-3 text-secondary">Comments</h2>
+
+<div class="container-fluid" id="comments">
+    <div class="row row-cols-1 row-cols-sm-1 g-4">
+
+        <!-- Form column -->
+        <div class="col-12 col-lg-4">
+            <%= render "comments/new", post: post %>
+        </div>
+
+        <!-- Comments column -->
+        <div class="col-12 col-lg-8">
+            <div class="d-flex flex-column">
+
+                  <!-- Verifing if post comments are not empty -->
+
+                <% if post.comments.empty? %>
+
+                <div class="flex flex-column align-items-center">
+
+                  <p class="fw-semibold fs-3 text-center">No comments so far!</p>
+
+                </div>
+
+                <% else %>
+                <%= render post.comments %>
+                <% end %>
+            </div>
+        </div>
+
+    </div>
+</div>

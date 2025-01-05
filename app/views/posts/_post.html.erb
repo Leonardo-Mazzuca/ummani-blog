@@ -1,0 +1,30 @@
+<%
+=begin%>
+  This represents a post card that can be seen in the main page
+<%
+=end%>
+
+<div id="<%= dom_id post %>" >
+
+  <div div class="card mb-3" >
+    <div class="card-header">
+     <h5 class="card-title">
+      <%= post.title %>
+    </h5>
+  </div>
+    <div class="card-body">
+      <h5 class="fs-6 fw-semibold text-secondary">
+        <%= time_tag post.updated_at, "data-local": "time", "data-format" => "%B %e, %Y %l:%M%P" %>
+      </h5>
+      <p class="card-text">
+        <%= post.body %>
+      </p>
+
+      <%=  link_to "Show this post", post, class: "btn text-white btn-dark" %>
+
+    </div>
+  </div>
+
+</div>
+
+

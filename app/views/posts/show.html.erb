@@ -1,0 +1,38 @@
+<%= turbo_stream_from @post %>
+
+<p style="color: green"><%= notice %></p>
+
+<div class="container d-flex flex-column gap-3">
+
+    <div>
+
+       <%= render '/layouts/back-link' %>
+
+    </div>
+
+    <%= render @post %>
+
+    <div class="d-flex align-items-center gap-2 my-3">
+
+
+        <% if current_user %>
+
+          <% if current_user == @post.user %>
+
+            <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-primary" %>
+
+            <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-danger" %>
+
+          <% else %>
+
+            <p class="text-secondary fw-semibold">You can only edit and delete your posts</p>
+     
+          <% end %>
+
+        <% end %>
+
+    </div>
+
+    <%= render "comments/comments", post: @post %>
+
+</div>

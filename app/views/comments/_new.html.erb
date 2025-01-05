@@ -1,0 +1,22 @@
+<%= form_with model: [post ,Comment.new] do |form| %>
+
+    <%
+=begin%>
+    If user exists, only then, he can comment.
+<%
+=end%>
+
+    <% if current_user %>
+        <div class="d-flex flex-column gap-2 mb-5">
+
+            <p class="fw-semibold fs-3">
+                Your comment
+            </p>
+
+            <%= form.text_area :content, size: "20x5", class: "form-control", required:true %><br>
+            <%= form.submit "Comment", class: "btn btn-dark" %>
+
+        </div>
+    <% end %>
+
+<% end %>
