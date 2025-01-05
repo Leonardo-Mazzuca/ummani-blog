@@ -36,7 +36,14 @@ Once this is done, you'll have to execute all migrations:
 rails db:migrate
 ```
 
-If you want to log using some of the default data, you should try
+And finally to populate the database with default data, you'll
+populate the database using:
+
+```bash
+rails db:seed
+```
+
+If you want to sign in using some of the default data, you should try:
 
 ```ruby
 user = User.create(
@@ -45,15 +52,6 @@ user = User.create(
   password_confirmation: "johndoe123"
 )
 ```
-   
-
-And finally to populate the database with default data, you'll
-populate the database using:
-
-```bash
-rails db:seed
-```
-
 
 ## Running the app 🏃‍♂️
 
