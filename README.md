@@ -16,10 +16,9 @@ use ruby on rails.
     git clone https://github.com/Leonardo-Mazzuca/ummani-blog
 
 
-
   after you must use 
   
-    ```bash
+     ```bash
      bundle install
 
 
@@ -34,14 +33,14 @@ use ruby on rails.
   
   Once this is done, you'll have to execute all migrations:
 
-     ```bash
+    ```bash
     rails db:migrate
    
 
   And finally to populate the database with default data, you'll
   populate the database using:
 
-     ```bash
+    ```bash
     rails db:seed
 
 
@@ -49,10 +48,9 @@ use ruby on rails.
 
   After all the last steps are done, you'll be able to run the app
 
-      ```bash
+     ```bash
      rails s
 
-      
   And then try to access the app running at http://localhost:3000 !
 
   
