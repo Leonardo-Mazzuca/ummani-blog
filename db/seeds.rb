@@ -13,7 +13,7 @@ user = User.create(
   password_confirmation: "johndoe123"
 )
 
-puts user.errors.full_messages unless user.errors.empty?  # Mostra erros se houver
+puts user.errors.full_messages unless user.errors.empty?  
 
 3.times do |i|
   post = Post.create(
@@ -22,5 +22,5 @@ puts user.errors.full_messages unless user.errors.empty?  # Mostra erros se houv
     user_id: user.id
   )
 
-  puts post.errors.full_messages unless post.errors.empty?  # Mostra os erros dos posts
+  puts post.errors.full_messages unless post.errors.empty?  
 end
