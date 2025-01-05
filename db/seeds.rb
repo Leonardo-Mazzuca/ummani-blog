@@ -7,5 +7,20 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+user = User.create(
+  email: "johndoe@gmail.com",
+  password: "johndoe123",
+  password_confirmation: "johndoe123"
+)
 
-Post.update_all(user_id: 1) # Substitua 1 pelo ID do usuário adequado
+puts user.errors.full_messages unless user.errors.empty?  # Mostra erros se houver
+
+3.times do |i|
+  post = Post.create(
+    title: "Post #{i+1}",
+    body: "Post content #{i+1}",
+    user_id: user.id
+  )
+
+  puts post.errors.full_messages unless post.errors.empty?  # Mostra os erros dos posts
+end
