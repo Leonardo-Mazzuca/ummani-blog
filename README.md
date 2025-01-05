@@ -35,6 +35,16 @@ Once this is done, you'll have to execute all migrations:
 ```bash
 rails db:migrate
 ```
+
+If you want to log using some of the default data, you should try
+
+```ruby
+user = User.create(
+  email: "johndoe@gmail.com",
+  password: "johndoe123",
+  password_confirmation: "johndoe123"
+)
+```
    
 
 And finally to populate the database with default data, you'll
