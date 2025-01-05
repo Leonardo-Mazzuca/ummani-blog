@@ -19,7 +19,7 @@ use ruby on rails.
 
   after you must use 
   
-    \```bash
+    ```bash
      bundle install
 
 
@@ -28,20 +28,20 @@ use ruby on rails.
 
   First, you should create the database 
   
-    \```bash
+    ```bash
     rails db:create
   
   
   Once this is done, you'll have to execute all migrations:
 
-     \```bash
+     ```bash
     rails db:migrate
    
 
   And finally to populate the database with default data, you'll
   populate the database using:
 
-     \```bash
+     ```bash
     rails db:seed
 
 
@@ -49,7 +49,7 @@ use ruby on rails.
 
   After all the last steps are done, you'll be able to run the app
 
-      \```bash
+      ```bash
      rails s
 
       
