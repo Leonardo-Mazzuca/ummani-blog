@@ -12,17 +12,15 @@ use ruby on rails.
 
   First, clone this repo to your machine usign 
 
-     ```console
-    foo@bar:~$ whoami
-    foo
-    ```
+     ```bash
+    git clone https://github.com/Leonardo-Mazzuca/ummani-blog
 
 
   after you must use 
   
-     ```bash
+     ```javascript
      bundle install
-
+     ```
 
   And then you'll have to create the database, so 
   you have to run a couple commands.
