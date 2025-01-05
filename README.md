@@ -10,48 +10,50 @@ use ruby on rails.
 
 ## Getting started 🏳️
 
-  First, clone this repo to your machine usign 
-
-     ```bash
-    git clone https://github.com/Leonardo-Mazzuca/ummani-blog
-
+```bash
+git clone https://github.com/Leonardo-Mazzuca/ummani-blog
+```
 
   after you must use 
   
-     ```javascript
-     bundle install
-     ```
+```bash
+bundle install
+```
 
-  And then you'll have to create the database, so 
-  you have to run a couple commands.
+And then you'll have to create the database, so 
+you have to run a couple commands.
 
-  First, you should create the database 
+First, you should create the database 
   
-    ```bash
-    rails db:create
+```bash
+ rails db:create
+```
   
   
-  Once this is done, you'll have to execute all migrations:
+Once this is done, you'll have to execute all migrations:
 
-    ```bash
-    rails db:migrate
+```bash
+rails db:migrate
+```
    
 
-  And finally to populate the database with default data, you'll
-  populate the database using:
+And finally to populate the database with default data, you'll
+populate the database using:
 
-    ```bash
-    rails db:seed
+```bash
+rails db:seed
+```
 
 
 ## Running the app 🏃‍♂️
 
-  After all the last steps are done, you'll be able to run the app
+After all the last steps are done, you'll be able to run the app
 
-     ```bash
-     rails s
+```bash
+rails s
+```
 
-  And then try to access the app running at http://localhost:3000 !
+And then try to access the app running at http://localhost:3000 !
 
   
 
