@@ -1,24 +1,60 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi! You are probably rating my code skills if you are reading this file!
 
-Things you may want to cover:
+So this is a test from an intership application that i've applied, and in this read.me i'll
+document every thing that it's required from the test github.
 
-* Ruby version
+First, make sure that you have ruby installed in your machine, because we're going to
+use ruby on rails.
 
-* System dependencies
+## Getting started 🏳️
 
-* Configuration
+  First, clone this repo to your machine usign 
 
-* Database creation
+    \```bash
+     git clone https://github.com/Leonardo-Mazzuca/ummani-blog
+    \```
 
-* Database initialization
+  after you must use 
+  
+    \```bash
+     bundle install
+    \```
 
-* How to run the test suite
+  And then you'll have to create the database, so 
+  you have to run a couple commands.
 
-* Services (job queues, cache servers, search engines, etc.)
+  First, you should create the database 
+  
+     \```bash
+    rails db:create
+    \```
+  
+  Once this is done, you'll have to execute all migrations:
 
-* Deployment instructions
+    \```bash
+    rails db:migrate
+    \```
 
-* ...
+  And finally to populate the database with default data, you'll
+  populate the database using:
+
+    \```bash
+    rails db:seed
+    \```
+
+## Running the app 🏃‍♂️
+
+  After all the last steps are done, you'll be able to run the app
+
+    \```bash
+     rails s
+    \```
+      
+  And then try to access the app running at http://localhost:3000 !
+
+  
+
+
+
