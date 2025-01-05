@@ -15,11 +15,7 @@
 
         <h1>Latest posts</h1>
 
-        <% if current_user %>
-        <%= link_to "New post", new_post_path, class: "btn btn-primary text-white" %>
-        <% else %>
-        <%= link_to "New post", new_user_session_path, class: "btn btn-primary text-white" %>
-        <% end %>
+        <%= link_to "New post", current_user ? new_post_path : new_user_session_path, class: "btn btn-primary text-white" %>
 
     </div>
 
