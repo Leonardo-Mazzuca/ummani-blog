@@ -12,8 +12,9 @@ use ruby on rails.
 
   First, clone this repo to your machine usign 
 
-    ```bash
-    git clone https://github.com/Leonardo-Mazzuca/ummani-blog
+     ```console
+    foo@bar:~$ whoami
+    foo
     ```
 
 
