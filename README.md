@@ -1,24 +1,66 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi! You are probably evaluating my code skills if you are reading this file!
 
-Things you may want to cover:
+This is a test for an internship application that I've applied to, and in this README, I'll document everything that is required for the test.
 
-* Ruby version
+First, make sure you have Ruby installed on your machine, because we'll be using Ruby on Rails.
 
-* System dependencies
+## Getting started 🏳️
 
-* Configuration
+First clone this repo:
 
-* Database creation
+```bash
+git clone https://github.com/Leonardo-Mazzuca/ummani-blog
+```
 
-* Database initialization
+  after you must use 
+  
+```bash
+bundle install
+```
 
-* How to run the test suite
+Next, you'll need to create the database by running a couple of commands.
 
-* Services (job queues, cache servers, search engines, etc.)
+First, create the database:
+  
+```bash
+ rails db:create
+```
+  
+Once this is done, you'll need to run all migrations:
 
-* Deployment instructions
+```bash
+rails db:migrate
+```
 
-* ...
+Finally to populate the database with default data, use
+
+```bash
+rails db:seed
+```
+
+If you want sign in with some of the default data, try to use:
+
+```ruby
+user = User.create(
+  email: "johndoe@gmail.com",
+  password: "johndoe123",
+  password_confirmation: "johndoe123"
+)
+```
+
+## Running the app 🏃‍♂️
+
+After all the previous steps are completed, you'll be able to run the app
+
+```bash
+rails s
+```
+
+Then try to access the app running at http://localhost:3000 !
+
+  
+
+
+
