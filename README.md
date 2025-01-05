@@ -14,6 +14,7 @@ use ruby on rails.
 
     ```bash
     git clone https://github.com/Leonardo-Mazzuca/ummani-blog
+    ```
 
 
   after you must use 
