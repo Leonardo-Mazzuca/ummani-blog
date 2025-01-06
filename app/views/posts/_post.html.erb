@@ -26,7 +26,7 @@ This represents a post card that can be seen in the main page
             
                         <!-- I'm doing it to only display the ellipsis on the root or posts page, otherwise, the user will be able to see all the post content -->
             <% if request.path == "/posts" || request.path == "/"  %>
-            <div style="max-height: 90px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+            <div style="max-height: 200px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
                 <p class="card-text">
                     <%= post.body.to_s %>
                 </p>
