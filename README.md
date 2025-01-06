@@ -8,10 +8,15 @@ First, make sure you have Ruby installed on your machine, because we'll be using
 
 ## Getting started 🏳️
 
-First clone this repo:
+First clone this repo in your current folder:
 
 ```bash
-git clone https://github.com/Leonardo-Mazzuca/ummani-blog
+git clone https://github.com/Leonardo-Mazzuca/ummani-blog .
+```
+Or if you want to create in a new folder use just: 
+
+```bash
+git clone https://github.com/Leonardo-Mazzuca/ummani-blog 
 ```
 
   after you must use 
