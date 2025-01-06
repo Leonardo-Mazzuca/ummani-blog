@@ -19,21 +19,24 @@
 
     </div>
 
-    
+
+          <% if @posts.any? %> <!-- Check to see if posts exists -->
           <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4" id="posts">
 
-            <% if @posts.any? %> <!-- Check to see if posts exists -->
+          
               <% @posts.each do |post| %>
                 <div>
                   <%= render post %>
                 </div>
               <% end %>
+          
+            </div>
+
             <% else %> <!-- If not, render a custom message -->
-              <div class="col-12 d-flex justify-content-center align-items-center">
+              <div class="d-flex justify-content-center align-items-center">
                 <p class=" fs-1 fw-bold">No posts available. Add some posts to get started!</p>
               </div>
-            <% end %>
 
-          </div>
+           <% end %>
 
 </div>
