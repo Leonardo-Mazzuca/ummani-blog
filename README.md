@@ -19,7 +19,7 @@ Or if you want to create in a new folder use just:
 git clone https://github.com/Leonardo-Mazzuca/ummani-blog 
 ```
 
-  after you must use 
+Once you are inside the project use:
   
 ```bash
 bundle install
