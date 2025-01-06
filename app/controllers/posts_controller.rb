@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
+
   before_action :set_post, only: %i[ show edit update destroy ]
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    # creating pagination here
+    @posts = Post.order(created_at: :desc)
+
   end
 
   # GET /posts/1 or /posts/1.json

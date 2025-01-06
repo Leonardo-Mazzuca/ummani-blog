@@ -6,25 +6,32 @@
 
     <%= render '/layouts/feedback' %>
 
-    <div class="d-flex my-5 align-items-center justify-content-between">
+    <div class="d-flex my-5 align-items-center flex-column ">
 
-        <h1>Latest posts</h1>
+        <div class="d-flex align-items-center flex-column gap-2">
+          <h1 class="fw-1 fw-bold">Welcome to our blog</h1>
+          <p class="text-secondary fw-semibold fs-5">
+            Meet and discover awesome content posted by our users!
+          </p>
+        </div>
 
         <%= link_to "New post", current_user ? new_post_path : new_user_session_path, class: "btn btn-primary text-white" %>
 
     </div>
 
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4" id="posts">
+    
 
-        <% @posts.each do |post| %>
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4" id="posts">
 
-        <div>
-            <%= render post %>
-        </div>
+          <% @posts.each do |post| %>
 
-        <% end %>
+          <div>
+              <%= render post %>
+          </div>
 
-    </div>
+          <% end %>
+
+      </div>
 
 
 </div>
