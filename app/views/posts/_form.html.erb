@@ -13,12 +13,12 @@
 
   <div class="my-3">
     <%= form.label :title, style: "display: block", class: "form-label" %>
-    <%=  form.text_field :title, class:"form-control" %>
+    <%=  form.text_field :title, class:"form-control", required: true %>
   </div>
 
   <div class="my-3">
     <%= form.label :body, style: "display: block", class: "form-label" %>
-    <%= form.textarea :body, class:"form-control w-100", style: "height: 200px" %>
+    <%= form.rich_text_area :body, required: true, style: "min-height: 200px" %>
   </div>
 
   <div>

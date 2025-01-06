@@ -1,31 +1,57 @@
 <%
 =begin%>
-  This represents a post card that can be seen in the main page
+This represents a post card that can be seen in the main page
 <%
 =end%>
 
-<div id="<%= dom_id post %>" >
+<div id="<%= dom_id post %>">
 
-  <div div class="card mb-3" >
-    <div class="card-header">
-     <h5 class="card-title">
-      <%= post.title %>
-    </h5>
-  </div>
-    <div class="card-body">
-      <h5 class="fs-6 fw-semibold text-secondary">
-        <%= time_tag post.updated_at, "data-local": "time", "data-format" => "%B %e, %Y %l:%M%P" %>
-      </h5>
-      <p class="card-text">
-        <%= post.body %>
-      </p>
+    <div div class="card mb-3" style="min-height:280px">
+        <div class="card-header">
+            <h5 class="card-title">
+                <%= post.title %>
+            </h5>
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div class="d-flex flex-column gap-2">
 
-      <%=  link_to "Show this post", post, class: "btn text-white btn-dark" %>
+
+                <h5 class="fs-6 fw-semibold text-secondary">
+                    <%= time_tag post.updated_at, "data-local": "time", "data-format" => "%B %e, %Y %l:%M%P" %>
+                </h5>
+
+                <h6 class="fs-6 fw-bold text-dark">
+                    <%= post.user.email %>
+                </h6>
+
+
+            </div>
+
+            <hr class="my-0" />
+
+            <!-- I'm doing it to only display the ellipsis on the root or posts page, otherwise, the user will be able to see all the post content -->
+            <% if request.path == "/posts" || request.path == "/"  %>
+            <div style="max-height: 90px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                <p class="card-text">
+                    <%= post.body.to_s %>
+                </p>
+            </div>
+            <% else %>
+
+            <div>
+                <p class="card-text">
+                    <%= post.body.to_s %>
+                </p>
+            </div>
+            <% end %>
+
+
+            <div>
+                <%=  link_to "Show this post", post, class: "btn text-white btn-dark" %>
+            </div>
+
+        </div>
 
     </div>
-    
-  </div>
 
 </div>
-
-
